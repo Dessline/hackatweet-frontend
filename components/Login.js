@@ -1,19 +1,27 @@
 import styles from '../styles/Login.module.css';
-
-
-import { useDispatch } from 'react-redux';
-import { addFriendToStore } from '../reducers/user';
+import { useSelector } from 'react-redux';
+import { UserToStore } from '../reducers/user';
+import { login, logout } from '../reducers/user';
+import SignIn from './SignIn';
 
 function Login() {
+  const [User, setUser] = useState(null);
+  const selectUser = (name) => {
+    console.log('CLICK', name);
+    setUser(name);
+  };
+ 
   return (
     <div>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-      </main>
+      <h3>Last burger:...</h3>
+      <User selectBurger={selectUser}/>
     </div>
   );
-}
+
+ 
+ 
+ }
+
+
 
 export default Login;
