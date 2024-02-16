@@ -1,5 +1,9 @@
 import styles from '../styles/Login.module.css';
 
+
+import { useDispatch } from 'react-redux';
+import { addFriendToStore } from '../reducers/user';
+
 function Login() {
   return (
     <div>
