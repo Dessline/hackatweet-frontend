@@ -1,7 +1,17 @@
+import Login from '../components/Login';
 import SignIn from '../components/SignIn';
+import SignUp from '../components/SignUp';
 
-function Login() {
-  return <SignIn />;
+function LoginPage() {
+    
+    return (
+        <>
+    
+        <Login/>
+        <SignUp/>
+        <SignIn/>
+    
+        </>)
 }
 
-export default Login;
+export default LoginPage;
